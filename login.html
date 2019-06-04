@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+    <script src="new 1.js"></script>
+
+  <title>register</title>
+	<style>
+	.box{
+	border-color:white;
+	border-width: 7px;
+	border-style: solid;
+    background-color:white;
+	}
+    .gap{
+        padding-top:14px;
+            }
+
+	body{
+	background-color:hsl(170, 95%, 93%);
+	
+
+	
+	padding: 30px 300px 1800px 550px;
+    
+	margin: 0;
+    
+	top: 0;
+    
+	left: 0;
+    
+	width: 450px;
+    
+	height: 270px;
+    
+	background: hsl(174, 70%, 54%);
+    
+	animation-name: backdiv;
+    
+	animation-duration: 6s; 
+    
+	animation-iteration-count:infinite;
+	
+	}
+	@keyframes backdiv {
+    
+	20% {
+      
+	background: hsl(170, 95%, 93%);
+
+	}
+	40%{
+
+	background: hsl(171, 54%, 91%);
+
+	}
+	60% {
+      
+	background: hsl(174, 70%, 54%);
+
+	}
+	80%{
+	background: hsl(174, 72%, 56%);
+	} 
+	100%{
+	background: hsl(175, 51%, 52%);
+	}   
+	}
+  
+	}
+
+	h1{
+    font-size: 27px;
+    font-family: Lobster;
+	color:purple;  
+	}
+
+	form{
+	color: black;
+	font-size: 18px;
+	padding-left:70px ;
+	}
+	
+	button {
+    
+	border-radius: 5px;
+    
+	color: pink;
+    
+	background-color: #0F5897;
+    
+	padding: 5px 10px 8px 10px;
+	
+  
+	}
+  
+	button:hover {
+    
+	animation-name: background-color;
+    
+	animation-duration: 6s;
+  
+	}
+  
+	@keyframes background-color{
+    
+	100%{
+
+        background-color: magenta;
+
+        }
+	50%{
+	background-color: purple;
+
+        }
+	0%{
+	background-color: pink;
+	}
+	}
+	
+	</style>
+</head>
+
+<body>
+<br>
+<div class="box">
+
+	<form onsubmit="store_data()">
+
+ <h1>REGISTER</h1>
+  
+  <a href="#" class="face">
+
+<i class="facebook">
+Facebook</i>
+</a>
+<a href="#" class="goog">
+<img src="icon-google.png" alt="GOOGLE">
+Google
+</a>
+<div>
+	User name
+</div>
+<div >
+	<input id="2" name="user_name" value="" type="text" placeholder="Mahesh Sagar" required><br><br>
+</div>
+	
+	Age 
+<div>
+	<input id="3" name="age" type="text" value="" placeholder="Eg:20" required><br><br>
+</div>
+	
+	Phone no 
+<div >
+	<input id="4" name="phone" type="text" value="" placeholder="10 digit" required><br><br>
+</div>
+	
+	Email id
+<div>
+	<input id="5" name="email" type="text" value="" placeholder="harshu@gmail.com" required><br><br>	
+
+</div>
+
+
+Location
+<div>
+<select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
+
+<select id ="state" class="form-control" required></select>
+
+<script language="javascript">print_state("sts");</script>
+</div><br>
+	Profession 
+
+<label for="work">(Work)</label><span style="color: red !important; display: inline; float: none;">*</span>      
+<div>
+<select id="6" name="work" value="">
+  <option value="pottery">   Pottery 	  </option>
+  <option value="handcraft">   Handcraft   </option>
+  <option value="handloom">   Handloom   </option>
+  <option value="weaving">   Weaving   </option>
+	</select>
+<br><br>
+</div>
+
+	Favorite 
+<div>
+    <!--<input id="7" name="favorite" type="text" placeholder="Handloom" required><br><br>-->
+    <select id="7" name="favorite" value="">
+        <option value="pottery">   Pottery 	  </option>
+        <option value="handcraft">   Handcraft   </option>
+        <option value="handloom">   Handloom   </option>
+        <option value="weaving">   Weaving   </option>
+          </select>
+      
+</div>
+<br>
+	Team Type
+<div>
+    <select id="8" name="team_type" value="">
+        <option value="Individual">   Individual 	  </option>
+        <option value="Group">   Group   </option>
+        <option value="Sartup">   Sartup   </option>
+    </select>
+</div>	
+<div class="gap">
+    Group Name
+</div>
+
+
+
+<div>
+	<input id="9" name="gname" type="text" value="" placeholder="Navic" required><br><br>
+</div>
+
+
+Password:
+<div>
+ <input type="password" name="pass" value="" id="10">
+ </div>
+ <br>
+<input type="checkbox" placeholder="6 character" required onclick="myFunction()">Show Password
+
+<script>
+function myFunction() {
+  var x = document.getElementById("10");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+
+<br><br>
+	Confirm password: 
+	<div>
+	<input type="password" name="cpass" value="" id="11"><br><br>
+	</div>
+<div>
+<input type="checkbox" placeholder="6 character" required onclick="myFunction1()">Show Password
+	
+	<script>
+function myFunction1() {
+  var x = document.getElementById("11");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+</div>
+<br><br>
+
+	<label id="confirm"><input type="checkbox" name="me"> I accept all terms and condition</label>
+
+<br>
+<br>
+  
+    
+<input type="submit" value="SUBMIT">
+  </form>
+  </div>
+
+
+<script> function store_data(){
+    var user_name=document.getElementById("2").value;
+    var age=document.getElementById("3").value;
+    var phone=document.getElementById("4").value;
+    var email=document.getElementById("5").value;
+    var country=document.getElementById("6").value;
+    var favorite=document.getElementById("7").value;
+    var team_type=document.getElementById("8").value;
+    var gname=document.getElementById("9").value;
+    var pass=document.getElementById("10").value;
+    var cpass=document.getElementById("11").value;  
+    }  </script>
+</body>
+</html> 
